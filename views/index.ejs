@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books I've Read</title>
+  </head>
+  <body>
+    <h1>Books I've Read</h1>
+    <form action="/add" method="post">
+      <input type="submit" name="add" value="Add Book" id="tab" />
+    </form>
+    <div>
+      <% books.forEach(function(book) { %>
+      <h2><%= book.title %></h2>
+      <p><%= book.Author %></p>
+      <p><%= book.description %></p>
+      <p><%= book.rating %></p>
+      <button type="button">Edit Book</button>
+      <% }); %>
+    </div>
+  </body>
+</html>
